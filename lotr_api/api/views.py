@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Films
-from django.http import HttpResponse,JsonResponse
+from django.http import HttpResponse, JsonResponse
 
 
 def index(request):
@@ -9,4 +9,6 @@ def index(request):
 
 def things(request):
     data = list(Films.objects.values())
-    return JsonResponse({'data': data})
+    title = "hello"
+    #return JsonResponse({'data': data})
+    return render(request, 'things.html', {'txt': data})
