@@ -7,6 +7,12 @@
     <link href="{% static 'css.css' %}" rel="stylesheet">
 </head>
 <body>
-    <h1>{{txt}}</h1>
+    {% if data %}
+            {% for i in data %}
+                <td><h1>{{i}}</h1></td>
+            {% endfor %}
+    {% else %}
+        There are no records in the system
+    {% endif %}
 </body>
 </html>

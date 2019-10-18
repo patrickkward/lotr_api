@@ -8,7 +8,8 @@ def index(request):
 
 
 def things(request):
-    data = list(Films.objects.values())
+    #data = list(Films.objects.values())
+    data = ["Dave", "John"]
     title = "hello"
     #return JsonResponse({'data': data})
-    return render(request, 'things.html', {'txt': data})
+    return render(request, 'things.html', {'data': data})
