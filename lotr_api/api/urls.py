@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import index, things
+from .views import index, things, createform
 
 urlpatterns = [
     path('', index),
-    path('things/', things)
+    path('things/', things),
+    path('createform', createform)
 ]
 
